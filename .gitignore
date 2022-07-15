@@ -12,6 +12,12 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+appium/
+intro-to-appium.iml
+intro-to-appium.ipr
+node_modules/
+package-lock.json
+package.json
 
 # Generated files
 .idea/**/contentModel.xml

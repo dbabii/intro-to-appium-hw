@@ -11,6 +11,9 @@ public class PageView {
     AppiumDriver<MobileElement> driver;
 
     // TODO define textField MobileElement using @FindBy kind of annotations for iOS and Android
+    @iOSXCUITFindBy(iOSNsPredicate = "name == 'IntegerA'")
+    @AndroidFindBy(id = "io.appium.android.apis:id/edit")
+    private MobileElement textField;
 
     public PageView(AppiumDriver<MobileElement> driver) {
         this.driver = driver;
@@ -19,11 +22,12 @@ public class PageView {
 
     public String getTextField() {
         // TODO return text from the textField element
-        return "";
+        return textField.getText();
     }
 
     public PageView setTextField(String text) {
         // TODO set text to the textField element
+        textField.sendKeys(text);
         return this;
     }
 }
